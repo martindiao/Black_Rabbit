@@ -84,10 +84,11 @@ namespace Black_Rabbit
             }
         }
 
-        private void Start()
+        private void Awake()
         {
             isPlaying = false;
             _audio = this.GetComponent<AudioSource>();
+            _audio.playOnAwake = false;
             if (Clips.Length > 0)
             {
                 index = 0;

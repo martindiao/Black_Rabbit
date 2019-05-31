@@ -3,6 +3,15 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+Temp/
+obj/
+Logs/
+Library/
+UNTER_BLACKRABIT.sln
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp.csproj
+Assets/UNTER/
+Assets/UNTER.meta
 # User-specific files
 *.rsuser
 *.suo
@@ -64,7 +73,7 @@ StyleCopReport.xml
 *_p.c
 *_h.h
 *.ilk
-*.meta
+
 *.obj
 *.iobj
 *.pch

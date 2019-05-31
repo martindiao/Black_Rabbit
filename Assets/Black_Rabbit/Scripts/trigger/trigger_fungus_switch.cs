@@ -7,6 +7,7 @@ namespace Black_Rabbit
 {
 
     [RequireComponent(typeof(simple_switch))]
+    [AddComponentMenu("Black-Rabit/Trigger/Trigger_Fungus_Switch")]
     public class trigger_fungus_switch : trigger_fungus
     {
         public bool needRevert = false;

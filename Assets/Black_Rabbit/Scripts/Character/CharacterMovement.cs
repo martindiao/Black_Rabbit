@@ -3,7 +3,7 @@
 namespace Black_Rabbit
 {
 
-[AddComponentMenu("Black-Rabit/Player/3DBasicMoveMent")] // create root in add component menu
+[AddComponentMenu("Black-Rabit/Character/3DBasicMoveMent")] // create root in add component menu
 //this need rigidbody and cap-collider to work
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CapsuleCollider))]

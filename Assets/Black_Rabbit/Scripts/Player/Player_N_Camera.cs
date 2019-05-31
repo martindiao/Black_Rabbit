@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Black_Rabbit
 {
     //manage the player and the camera
+    [AddComponentMenu("Black-Rabit/Player/Player_And_Camera")]
     public class Player_N_Camera : MonoBehaviour
     {
         public string player_name="player", follow_cam_name= "Look_Player_Cam";

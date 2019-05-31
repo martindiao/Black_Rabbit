@@ -5,11 +5,18 @@ using Fungus;
 
 namespace Black_Rabbit
 {
+    [AddComponentMenu("Black-Rabit/Trigger/Trigger_Fungus")]
     public class trigger_fungus : trigger
     {
         public Flowchart control;
-        public string _message;
+        public string _message="doit";
+        public string blockName = "flow";
 
+        override public void Start()
+        {
+            base.Start();
+            control = transform.Find(blockName).GetComponent<Flowchart>();
+        }
 
         private void Update()
         {

@@ -18,8 +18,8 @@ namespace Black_Rabbit
         {
             currentVolume = volume.value;
             //sc.setVolume(currentVolume);
-            pre.onClick.AddListener(sc.preSong);
-            after.onClick.AddListener(sc.nextSong);
+            pre.onClick.AddListener(sc.PreSong);
+            after.onClick.AddListener(sc.NextSong);
             play_pause.onClick.AddListener(sc.SwitchState);
         }
 
@@ -29,7 +29,7 @@ namespace Black_Rabbit
             if (currentVolume != volume.value)
             {
                 currentVolume = volume.value;
-                sc.setVolume(currentVolume);
+                sc.SetVolume(currentVolume);
             }
         }
     }

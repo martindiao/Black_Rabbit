@@ -9,6 +9,8 @@ namespace Black_Rabbit
     {
         base_trigger, fungus_trigger, full_trigger, talkable, talkable_with_cam
     }
+
+    [AddComponentMenu("Black-Rabit/Trigger/BasicTrigger")]
     public class trigger : MonoBehaviour
     {
         public Trigger_Type type;
@@ -21,7 +23,7 @@ namespace Black_Rabbit
         public bool isUseful;
         public bool isTalking = false;
         // Start is called before the first frame update
-        protected virtual void Start()
+        public virtual void Start()
         {
             UI = FindObjectOfType<trigger_message>();
             isUseful = false;

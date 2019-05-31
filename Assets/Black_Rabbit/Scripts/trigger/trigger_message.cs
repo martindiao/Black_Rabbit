@@ -5,15 +5,18 @@ using UnityEngine.UI;
 
 namespace Black_Rabbit
 {
+    [AddComponentMenu("Black-Rabit/Trigger/Trigger_Message_UI")]
+    [RequireComponent(typeof(CanvasGroup))]
     public class trigger_message : MonoBehaviour
     {
-        public Text trigger_name, action_message;
+        public Text trigger_title, action_message;
+        public string name_str="name", message_str="message";
         public bool isShow;
         private Transform _trigger;
 
         public void ShowMessage(string Name, string _Message, Transform trigger)
         {
-            trigger_name.text = Name;
+            trigger_title.text = Name;
             action_message.text = _Message;
             _trigger = trigger;
             isShow = true;
@@ -26,6 +29,8 @@ namespace Black_Rabbit
 
         void Start()
         {
+            trigger_title = transform.Find(name_str).GetComponent<Text>();
+            action_message = transform.Find(message_str).GetComponent<Text>();
             _trigger = null;
             isShow = false;
         }

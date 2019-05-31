@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace Black_Rabbit
 {
+    [AddComponentMenu("Black-Rabit/Sound/SoundController")]
+    [RequireComponent(typeof(AudioSource))]
     public class SoundControl : MonoBehaviour
     {
         public AudioClip[] Clips;
@@ -23,7 +25,7 @@ namespace Black_Rabbit
             isPlaying = true;
         }
 
-        public void setVolume(float _volume)
+        public void SetVolume(float _volume)
         {
             _audio.volume = _volume;
         }
@@ -40,7 +42,7 @@ namespace Black_Rabbit
             }
         }
 
-        public void preSong()
+        public void PreSong()
         {
             if (index > 0)
             {
@@ -64,7 +66,7 @@ namespace Black_Rabbit
             isPlaying = false;
         }
 
-        public void nextSong()
+        public void NextSong()
         {
             if (index < Clips.Length - 1)
             {

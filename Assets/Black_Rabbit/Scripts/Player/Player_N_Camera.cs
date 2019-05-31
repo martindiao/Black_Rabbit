@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Black_Rabbit
 {
+    //manage the player and the camera
     public class Player_N_Camera : MonoBehaviour
     {
         public string player_name="player", follow_cam_name= "Look_Player_Cam";
@@ -15,10 +16,36 @@ namespace Black_Rabbit
             follow_cam = transform.Find(follow_cam_name).gameObject;
         }
 
-        // Update is called once per frame
-        void Update()
+        public void PlayerDisable()
         {
+            player.SetActive(false);
+        }
 
+        public void PlayerEnable()
+        {
+            player.SetActive(true);
+        }
+
+        public void FollowCamDisable()
+        {
+            follow_cam.SetActive(false);
+        }
+
+        public void FollowCamEnable()
+        {
+            follow_cam.SetActive(true);
+        }
+
+        public void EnableAll()
+        {
+            PlayerEnable();
+            FollowCamEnable();
+        }
+
+        public void DisableALL()
+        {
+            PlayerEnable();
+            FollowCamEnable();
         }
     }
 

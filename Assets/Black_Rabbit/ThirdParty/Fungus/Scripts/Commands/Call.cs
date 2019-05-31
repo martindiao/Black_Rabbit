@@ -35,7 +35,7 @@ namespace Fungus
         [Tooltip("Flowchart which contains the block to execute. If none is specified then the current Flowchart is used.")]
         [SerializeField] protected Flowchart targetFlowchart;
 
-        [FormerlySerializedAs("targetSequence")]
+        [FormerlySerializedAs("targetSequence/目标对话块")]
         [Tooltip("Block to start executing")]
         [SerializeField] protected Block targetBlock;
 

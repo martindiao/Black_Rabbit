@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//simple active/disactive many things in one time and can revert 
 namespace Black_Rabbit
 {
     public class simple_switch : MonoBehaviour
@@ -9,7 +10,7 @@ namespace Black_Rabbit
         public GameObject[] to_active;
         public GameObject[] to_close;
 
-        public void do_switch()
+        public void Do_switch()
         {
             foreach (GameObject obj in to_active)
             {
@@ -21,7 +22,7 @@ namespace Black_Rabbit
             }
         }
 
-        public void revert_it()
+        public void Revert_it()
         {
             foreach (GameObject obj in to_active)
             {
@@ -32,16 +33,7 @@ namespace Black_Rabbit
                 obj.SetActive(true);
             }
         }
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        
     }
 
 }

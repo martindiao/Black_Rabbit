@@ -7,7 +7,7 @@ namespace Black_Rabbit
 {
 
     [RequireComponent(typeof(simple_switch))]
-    public class trigger_full_version : trigger_fungus
+    public class trigger_fungus_switch : trigger_fungus
     {
         public bool needRevert = false;
         // Update is called once per frame
@@ -33,7 +33,7 @@ namespace Black_Rabbit
 
             if (isUseful && Input.GetKeyUp(KeyCode.E))
             {
-                GetComponent<simple_switch>().do_switch();
+                GetComponent<simple_switch>().Do_switch();
                 control.GetComponent<Flowchart>().SendFungusMessage(_message);
             }
 

@@ -6,10 +6,11 @@ namespace Black_Rabbit
 {
     public class CameraManager : MonoBehaviour
     {
-        public SingleCamera PlayerFaceCam;
+        public FaceCamera PlayerFaceCam;
         public GameObject PlayerFollowCam;
 
-        public SingleCamera[] NPCCameras;
+        public FaceCamera[] NPCCameras;
+
 
         public void LookAtNPC(int index)
         {
@@ -17,7 +18,7 @@ namespace Black_Rabbit
             LeaveEyesOnPlayer();
             if (0 <=index && index < NPCCameras.Length)
             {
-                foreach (SingleCamera cam in NPCCameras)
+                foreach (FaceCamera cam in NPCCameras)
                 {
                     cam.LeaveEyes();
                 }
@@ -27,7 +28,7 @@ namespace Black_Rabbit
 
         public void LeaveEyesOnNPCs()
         {
-            foreach (SingleCamera cam in NPCCameras)
+            foreach (FaceCamera cam in NPCCameras)
             {
                 cam.LeaveEyes();
             }
@@ -59,22 +60,21 @@ namespace Black_Rabbit
         // Start is called before the first frame update
         private void Awake()
         {
-            PlayerFaceCam = FindObjectOfType<Player_N_Camera>().player.GetComponent<SingleCamera>();
+            PlayerFaceCam = FindObjectOfType<Player_N_Camera>().player.GetComponent<FaceCamera>();
             PlayerFollowCam = FindObjectOfType<Player_N_Camera>().follow_cam.gameObject;
         }
 
         void Start()
         {
             
-
             NPCGroup gp = FindObjectOfType<NPCGroup>();
             if (gp.CamNPCs != null)
             {
                 int length = gp.CamNPCs.Length;
-                NPCCameras = new SingleCamera[length];
+                NPCCameras = new FaceCamera[length];
                 for (int i = 0; i < length; i++)
                 {
-                    NPCCameras[i] = gp.CamNPCs[i].GetComponent<SingleCamera>();
+                    NPCCameras[i] = gp.CamNPCs[i].GetComponent<FaceCamera>();
                 }
             }
         }

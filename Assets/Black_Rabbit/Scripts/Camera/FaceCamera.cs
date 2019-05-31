@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Black_Rabbit
 {
-    public class SingleCamera : MonoBehaviour
+    //this is used to control the Camera whitch watch the NPC or Player's face
+    public class FaceCamera : MonoBehaviour
     {
         public string cameraName = "watch_face";
 
         public GameObject My_Camera;
 
-        // Start is called before the first frame update
         void Start()
         {
             My_Camera = transform.Find(cameraName).gameObject;
@@ -27,7 +27,6 @@ namespace Black_Rabbit
             My_Camera.SetActive(false);
         }
 
-        // Update is called once per frame
         void Update()
         {
 

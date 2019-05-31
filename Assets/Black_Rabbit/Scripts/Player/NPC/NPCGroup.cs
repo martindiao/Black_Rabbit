@@ -9,6 +9,7 @@ namespace Black_Rabbit
         public GameObject[] SimpleNPCs;
         public GameObject[] CamNPCs;
 
+
         void Start()
         {
 

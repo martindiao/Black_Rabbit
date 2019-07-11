@@ -13,6 +13,8 @@ namespace Black_Rabbit
         private int index;
         private bool isPlaying;
 
+        public bool isPlayOnAwake=false;
+
         public void Stop()
         {
             this.GetComponent<AudioSource>().Stop();
@@ -88,13 +90,13 @@ namespace Black_Rabbit
         {
             isPlaying = false;
             _audio = this.GetComponent<AudioSource>();
-            _audio.playOnAwake = false;
+            //_audio.playOnAwake = isPlayOnAwake;
             if (Clips.Length > 0)
             {
                 index = 0;
                 _audio.clip = Clips[index];
 
-                //audio.Play();
+                _audio.Play();
             }
 
         }
